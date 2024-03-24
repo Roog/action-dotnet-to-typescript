@@ -1,5 +1,5 @@
 {
-  "name": "dotnet-to-typescript",
+  "name": "@roog/dotnet-to-typescript",
   "description": "Typescript collection of interface & classes from C# .net",
   "main": "./src/dist/index.js",
   "version": "1.0.0",
