@@ -14,6 +14,6 @@
   "preserveInterfacePrefix": false,
   "convertDatesTo": "string",
   "convertNullablesTo": "null",
-  "importGeneration": "none",
+  "importGeneration": "Simple",
   "quotationMark": "double"
 }
