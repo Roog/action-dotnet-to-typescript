@@ -30,8 +30,16 @@ jobs:
         run: dotnet cs2ts
 
       - name: Generate typescript
-        run: ls -la ./render/ |
-          cat ./render/demo.ts
+        run: ls -la ./render/
+
+      - name: List all
+        run: |
+          search_dir=/render
+          for entry in "$search_dir"/*
+          do
+            echo "$entry"
+            cat $entry
+          done
 
       - name: Generate typescript
         run: dotnet cs2ts --help
