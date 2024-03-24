@@ -1,0 +1,15 @@
+{
+  "name": "dotnet-to-typescript",
+  "description": "Typescript collection of interface & classes from C# .net",
+  "main": "./src/dist/index.js",
+  "version": "1.0.0",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Roog/action-dotnet-to-typescript/new/main.git",
+    "directory": "render"
+  },
+  "publishConfig": {
+    "registry": "https://npm.pkg.github.com",
+    "directory": "./render"
+  }
+}
