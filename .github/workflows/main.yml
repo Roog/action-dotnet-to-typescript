@@ -30,7 +30,7 @@ jobs:
         run: dotnet cs2ts
 
       - name: Generate typescript
-        run: ls -la
+        run: ls -la ./render/
 
       - name: Generate typescript
         run: dotnet cs2ts --help
@@ -39,7 +39,7 @@ jobs:
         run: ls -la
 
       - name: Generate typescript
-        run: dotnet cs2ts -i ./src/ -o ./render/
+        run: dotnet cs2ts ./src/ -o ./render/
 
       - name: Generate typescript
         run: ls -la
