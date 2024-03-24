@@ -34,10 +34,10 @@ jobs:
 
       - name: List all
         run: |
-          search_dir=./render/
+          search_dir=./render
           for entry in "$search_dir"/*
           do
-            echo "$entry"
+            echo "\n $entry\n"
             cat $entry
           done
 
