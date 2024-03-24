@@ -29,5 +29,20 @@ jobs:
       - name: Generate typescript
         run: dotnet cs2ts
 
+      - name: Generate typescript
+        run: ls -la
+
+      - name: Generate typescript
+        run: dotnet cs2ts --help
+
+      - name: Generate typescript
+        run: ls -la
+
+      - name: Generate typescript
+        run: dotnet cs2ts -i ./src/ -o ./render/
+
+      - name: Generate typescript
+        run: ls -la
+
       #- run: dotnet build <my project>
       # cs2tsconfig.json
