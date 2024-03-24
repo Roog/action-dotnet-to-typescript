@@ -3,7 +3,7 @@ using System.Collections.Generic;
 
 namespace Test.models;
 
-public abstract class Element
+public class Element
 {
     public int ID { get; set; }
     public int Number { get; set; }
