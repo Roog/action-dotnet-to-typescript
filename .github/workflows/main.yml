@@ -1,0 +1,33 @@
+on:
+  workflow_dispatch
+
+jobs:
+  generate:
+    runs-on: ubuntu-22.04
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Setup dotnet
+        uses: actions/setup-dotnet@v4
+        with:
+          dotnet-version: 8.0.x
+
+      - name: Setup cache
+        uses: actions/cache@v3
+        with:
+          path: ~/.nuget/packages
+          # Look to see if there is a cache hit for the corresponding requirements file
+          key: ${{ runner.os }}-nuget-${{ hashFiles('**/*.csproj') }}
+          restore-keys: |
+            ${{ runner.os }}-nuget
+
+      - name: Setup dotnet dependencies
+        run: dotnet tool install --global CSharpToTypeScript.CLITool
+
+      - name: Generate typescript
+        run: dotnet cs2ts
+
+      #- run: dotnet build <my project>
+      # cs2tsconfig.json
